@@ -10,8 +10,10 @@
 		7A2922411A69B54600824E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2922401A69B54600824E41 /* AppDelegate.swift */; };
 		7A2922431A69B54600824E41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2922421A69B54600824E41 /* Images.xcassets */; };
 		7A2922461A69B54600824E41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2922441A69B54600824E41 /* MainMenu.xib */; };
-		8229C9861A6AC749008E3CAE /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9851A6AC749008E3CAE /* CSVImporter.swift */; };
+		8229C9861A6AC749008E3CAE /* CSVImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */; };
 		8229C9881A6AC78E008E3CAE /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = 8229C9871A6AC78E008E3CAE /* Fixtures */; };
+		8229C98A1A6AC94D008E3CAE /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9891A6AC94D008E3CAE /* CSVImporter.swift */; };
+		8229C98B1A6AC94D008E3CAE /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9891A6AC94D008E3CAE /* CSVImporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +34,9 @@
 		7A2922451A69B54600824E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7A29224B1A69B54600824E41 /* CatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2922501A69B54600824E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8229C9851A6AC749008E3CAE /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporter.swift; sourceTree = "<group>"; };
+		8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporterTests.swift; sourceTree = "<group>"; };
 		8229C9871A6AC78E008E3CAE /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
+		8229C9891A6AC94D008E3CAE /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 				7A2922421A69B54600824E41 /* Images.xcassets */,
 				7A2922441A69B54600824E41 /* MainMenu.xib */,
 				7A29223E1A69B54600824E41 /* Supporting Files */,
+				8229C9891A6AC94D008E3CAE /* CSVImporter.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -96,7 +100,7 @@
 			children = (
 				8229C9871A6AC78E008E3CAE /* Fixtures */,
 				7A29224F1A69B54600824E41 /* Supporting Files */,
-				8229C9851A6AC749008E3CAE /* CSVImporter.swift */,
+				8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */,
 			);
 			path = CatalogTests;
 			sourceTree = "<group>";
@@ -209,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8229C98A1A6AC94D008E3CAE /* CSVImporter.swift in Sources */,
 				7A2922411A69B54600824E41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8229C9861A6AC749008E3CAE /* CSVImporter.swift in Sources */,
+				8229C98B1A6AC94D008E3CAE /* CSVImporter.swift in Sources */,
+				8229C9861A6AC749008E3CAE /* CSVImporterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
