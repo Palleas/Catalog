@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A6722FBB-40F3-41B2-8F15-7188E6650ED6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Catalog</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6CFD734FD1CFAED8031175F6560D3CB731E60ABA</key>
+		<string>github.com:Palleas/Catalog.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Catalog.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6CFD734FD1CFAED8031175F6560D3CB731E60ABA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Palleas/Catalog.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6CFD734FD1CFAED8031175F6560D3CB731E60ABA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6CFD734FD1CFAED8031175F6560D3CB731E60ABA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Catalog</string>
+		</dict>
+	</array>
+</dict>
+</plist>

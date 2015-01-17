@@ -10,7 +10,8 @@
 		7A2922411A69B54600824E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2922401A69B54600824E41 /* AppDelegate.swift */; };
 		7A2922431A69B54600824E41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2922421A69B54600824E41 /* Images.xcassets */; };
 		7A2922461A69B54600824E41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2922441A69B54600824E41 /* MainMenu.xib */; };
-		7A2922521A69B54600824E41 /* CatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2922511A69B54600824E41 /* CatalogTests.swift */; };
+		8229C9861A6AC749008E3CAE /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9851A6AC749008E3CAE /* CSVImporter.swift */; };
+		8229C9881A6AC78E008E3CAE /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = 8229C9871A6AC78E008E3CAE /* Fixtures */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,8 @@
 		7A2922451A69B54600824E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7A29224B1A69B54600824E41 /* CatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2922501A69B54600824E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A2922511A69B54600824E41 /* CatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTests.swift; sourceTree = "<group>"; };
+		8229C9851A6AC749008E3CAE /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporter.swift; sourceTree = "<group>"; };
+		8229C9871A6AC78E008E3CAE /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +94,9 @@
 		7A29224E1A69B54600824E41 /* CatalogTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A2922511A69B54600824E41 /* CatalogTests.swift */,
+				8229C9871A6AC78E008E3CAE /* Fixtures */,
 				7A29224F1A69B54600824E41 /* Supporting Files */,
+				8229C9851A6AC749008E3CAE /* CSVImporter.swift */,
 			);
 			path = CatalogTests;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8229C9881A6AC78E008E3CAE /* Fixtures in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2922521A69B54600824E41 /* CatalogTests.swift in Sources */,
+				8229C9861A6AC749008E3CAE /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -354,6 +359,7 @@
 				INFOPLIST_FILE = CatalogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catalog.app/Contents/MacOS/Catalog";
 			};
 			name = Debug;
@@ -362,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -393,6 +400,7 @@
 				7A2922571A69B54600824E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A2922581A69B54600824E41 /* Build configuration list for PBXNativeTarget "CatalogTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +409,7 @@
 				7A29225A1A69B54600824E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
