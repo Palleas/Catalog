@@ -26,6 +26,8 @@ class CSVImporterTests: XCTestCase {
 
     func testRetrievingLineCount() {
         let importer = CSVImporter(path: csvPath)
+        importer.performImport()
+        
         XCTAssertEqual(importer.lineCount(), 20, "Importer should retrieve 20 lines")
     }
 }
