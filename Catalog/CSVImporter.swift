@@ -8,9 +8,13 @@
 
 import Cocoa
 
+struct Item {
+    var title: String
+}
+
 class CSVImporter: NSObject {
     let path: String
-    var lines: [String]?
+    var lines: [Item]?
     var stringBuffer: NSString? = NSString()
     
     init(path: String!) {
@@ -20,7 +24,7 @@ class CSVImporter: NSObject {
     
     func performImport() {
         if let handler = NSFileHandle(forReadingAtPath: path) {
-            lines = [String]()
+            lines = [Item]()
             
             var offset = UInt64(0)
             var data = handler.readDataOfLength(1024)
@@ -50,7 +54,10 @@ class CSVImporter: NSObject {
     
     func processLine(line: String) {
         println("line = \(line)")
-        lines?.append(line)
+        let title = line.componentsSeparatedByString(",")[8]
+        let cleanedTitle = title.stringByReplacingOccurrencesOfString("\"", withString: "")
+        
+        lines?.append(Item(title: cleanedTitle))
     }
     
     func lineCount() -> Int {
