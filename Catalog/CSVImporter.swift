@@ -8,9 +8,9 @@
 
 import Cocoa
 
-class CSVImporter: NSObject {
+public class CSVImporter: NSObject {
     let path: String
-    var titles: [String]
+    public var titles: [String]
     var stringBuffer: NSString? = NSString()
     
     init(path: String!) {
@@ -22,14 +22,15 @@ class CSVImporter: NSObject {
         if let handler = NSFileHandle(forReadingAtPath: path) {
             var offset = UInt64(0)
             var data = handler.readDataOfLength(1024)
-            
-            while(data.length > 0) {
+            var debugTick = 0
+            while(data.length > 0 && debugTick < 1000) {
+                debugTick++
                 var chunk = ""
                 if stringBuffer != nil {
                     chunk += stringBuffer!
                 }
                 
-                chunk += NSString(data: data, encoding: NSUTF8StringEncoding)!
+                chunk += NSString(data: data, encoding: NSUTF8StringEncoding) ?? ""
                 
             let lines = chunk.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
                 for (index, line) in enumerate(lines[0..<lines.count - 1]) {
@@ -46,6 +47,11 @@ class CSVImporter: NSObject {
     }
     
     func processLine(line: String) {
+        let rows = line.componentsSeparatedByString(",")
+        if rows.count < 9 {
+            return
+        }
+        
         let title = line.componentsSeparatedByString(",")[8]
         
         titles.append(title.stringByReplacingOccurrencesOfString("\"", withString: ""))
