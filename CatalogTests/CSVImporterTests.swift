@@ -29,7 +29,7 @@ class CSVImporterTests: XCTestCase {
         importer.performImport()
         
         XCTAssertEqual(importer.lineCount(), 20, "Importer should retrieve 20 lines")
-        XCTAssertEqual(importer.lines![0].title, "Noël", "First item's title should be Noël.")
-        XCTAssertEqual(importer.lines![19].title, "Sur les routes du monde /", "First item's title should be Sur les routes du monde /.")
+        XCTAssertEqual(importer.lines[0].title, "Noël", "First item's title should be Noël.")
+        XCTAssertEqual(importer.lines[19].title, "Sur les routes du monde /", "First item's title should be Sur les routes du monde /.")
     }
 }

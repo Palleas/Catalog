@@ -10,6 +10,11 @@
 		7A2922411A69B54600824E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2922401A69B54600824E41 /* AppDelegate.swift */; };
 		7A2922431A69B54600824E41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2922421A69B54600824E41 /* Images.xcassets */; };
 		7A2922461A69B54600824E41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2922441A69B54600824E41 /* MainMenu.xib */; };
+		8213E5FB1A773C810027CBD2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213E5FA1A773C810027CBD2 /* Realm.framework */; };
+		8213E5FC1A773C810027CBD2 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8213E5FA1A773C810027CBD2 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8213E5FF1A773CE90027CBD2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213E5FE1A773CE90027CBD2 /* Item.swift */; };
+		8213E6001A773E200027CBD2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213E5FE1A773CE90027CBD2 /* Item.swift */; };
+		8213E6021A773E560027CBD2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213E5FA1A773C810027CBD2 /* Realm.framework */; };
 		8229C9861A6AC749008E3CAE /* CSVImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */; };
 		8229C9881A6AC78E008E3CAE /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = 8229C9871A6AC78E008E3CAE /* Fixtures */; };
 		8229C98A1A6AC94D008E3CAE /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9891A6AC94D008E3CAE /* CSVImporter.swift */; };
@@ -26,6 +31,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8213E5FD1A773C810027CBD2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8213E5FC1A773C810027CBD2 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7A29223B1A69B54600824E41 /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A29223F1A69B54600824E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +53,8 @@
 		7A2922451A69B54600824E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7A29224B1A69B54600824E41 /* CatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2922501A69B54600824E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8213E5FA1A773C810027CBD2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/Mac/Realm.framework; sourceTree = "<group>"; };
+		8213E5FE1A773CE90027CBD2 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporterTests.swift; sourceTree = "<group>"; };
 		8229C9871A6AC78E008E3CAE /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
 		8229C9891A6AC94D008E3CAE /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporter.swift; sourceTree = "<group>"; };
@@ -44,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8213E5FB1A773C810027CBD2 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8213E6021A773E560027CBD2 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +83,7 @@
 		7A2922321A69B54600824E41 = {
 			isa = PBXGroup;
 			children = (
+				8213E6011A773E2B0027CBD2 /* Frameworks */,
 				7A29223D1A69B54600824E41 /* Catalog */,
 				7A29224E1A69B54600824E41 /* CatalogTests */,
 				7A29223C1A69B54600824E41 /* Products */,
@@ -83,6 +107,7 @@
 				7A2922441A69B54600824E41 /* MainMenu.xib */,
 				7A29223E1A69B54600824E41 /* Supporting Files */,
 				8229C9891A6AC94D008E3CAE /* CSVImporter.swift */,
+				8213E5FE1A773CE90027CBD2 /* Item.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -113,6 +138,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8213E6011A773E2B0027CBD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8213E5FA1A773C810027CBD2 /* Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +156,7 @@
 				7A2922371A69B54600824E41 /* Sources */,
 				7A2922381A69B54600824E41 /* Frameworks */,
 				7A2922391A69B54600824E41 /* Resources */,
+				8213E5FD1A773C810027CBD2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8229C98A1A6AC94D008E3CAE /* CSVImporter.swift in Sources */,
+				8213E5FF1A773CE90027CBD2 /* Item.swift in Sources */,
 				7A2922411A69B54600824E41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8229C98B1A6AC94D008E3CAE /* CSVImporter.swift in Sources */,
+				8213E6001A773E200027CBD2 /* Item.swift in Sources */,
 				8229C9861A6AC749008E3CAE /* CSVImporterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +367,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Catalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,6 +382,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Catalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +401,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -379,6 +424,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = CatalogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
