@@ -10,12 +10,12 @@ import Cocoa
 
 class CSVImporter: NSObject {
     let path: String
-    var lines: [Item]
+    var titles: [String]
     var stringBuffer: NSString? = NSString()
     
     init(path: String!) {
         self.path = path
-        lines = [Item]()
+        titles = [String]()
     }
     
     func performImport() {
@@ -47,13 +47,12 @@ class CSVImporter: NSObject {
     
     func processLine(line: String) {
         let title = line.componentsSeparatedByString(",")[8]
-        let cleanedTitle = title.stringByReplacingOccurrencesOfString("\"", withString: "")
         
-        lines.append(Item(title: cleanedTitle))
+        titles.append(title.stringByReplacingOccurrencesOfString("\"", withString: ""))
     }
     
     func lineCount() -> Int {
-        return lines.count
+        return titles.count
     }
     
 }

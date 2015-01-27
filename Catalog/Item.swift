@@ -10,11 +10,5 @@ import Cocoa
 import Realm
 
 public class Item: RLMObject {
-    dynamic var title: String
-    
-    init(title: String) {
-        self.title = title;
-
-        super.init()
-    }
+    dynamic var title: String = ""
 }
