@@ -36,7 +36,6 @@ class CSVImporter: NSObject {
                 }
                 
                 chunk += NSString(data: data, encoding: NSUTF8StringEncoding)!
-                println("Chuck = \(chunk)")
                 
             let lines = chunk.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
                 for (index, line) in enumerate(lines[0..<lines.count - 1]) {
@@ -53,7 +52,6 @@ class CSVImporter: NSObject {
     }
     
     func processLine(line: String) {
-        println("line = \(line)")
         let title = line.componentsSeparatedByString(",")[8]
         let cleanedTitle = title.stringByReplacingOccurrencesOfString("\"", withString: "")
         
