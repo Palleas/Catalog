@@ -6,10 +6,9 @@ Toying with a big CSV file.
 
 ## Install 
 
+You'll need [Carthage](http://github.com/carthage/carthage) to setup the dependencies.
+
 	$ git clone git@github.com:Palleas/Catalog.git
 	$ cd Catalog
-	$ bundle install 
+	$ carthage bootstrap 
 
-## Run tests
-
-	$ make test
