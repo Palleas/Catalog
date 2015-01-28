@@ -1,2 +1,2 @@
 github "realm/realm-cocoa"
-git "git@github.com:Palleas/ReactiveCSVParser.git" "use-framework"
+github "Palleas/ReactiveCSVParser"
