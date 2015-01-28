@@ -4,7 +4,7 @@ language: objective-c
 before_install:
     - brew update
     - brew install carthage --HEAD
-    - carthage bootstrap
+    - carthage bootstrap || find $TMPDIR -type f -name "carthage-xcodebuild.*" -exec cat {} \;
     - gem install bundler --no-rdoc --no-ri
     - bundle install
 
