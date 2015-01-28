@@ -6,4 +6,4 @@
 	url = https://github.com/realm/realm-cocoa.git
 [submodule "Carthage/Checkouts/ReactiveCSVParser"]
 	path = Carthage/Checkouts/ReactiveCSVParser
-	url = git@github.com:Palleas/ReactiveCSVParser.git
+	url = git://github.com/Palleas/ReactiveCSVParser.git
