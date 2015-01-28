@@ -3,4 +3,4 @@
 PROJECT=Catalog.xcodeproj
 SCHEME=Catalog
 
-xcodebuild test -project $PROJECT -scheme $SCHEME | bundle exec xcpretty
+xcodebuild test -project $PROJECT -scheme $SCHEME | bundle exec xcpretty && exit ${PIPESTATUS[0]}
