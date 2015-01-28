@@ -7,7 +7,7 @@ brew install carthage --HEAD
 echo "*********** Installing dependencies with Carthage ***********"
 carthage bootstrap
 ret=$?
-if [ $? -ne 0 ]; then 
+if [ $ret -ne 0 ]; then 
 	echo "⚠ Carthage command failed, here are the logs (maybe)"
 	find $TMPDIR -type f -name "carthage-xcodebuild.*" -exec cat {} \;
 	exit $ret
