@@ -1,3 +1,3 @@
 github "ReactiveCocoa/ReactiveCocoa" "v2.4.6"
 github "realm/realm-cocoa" "v0.90.3"
-git "git@github.com:Palleas/ReactiveCSVParser.git" "8da9c3a883cf7b5602729fd8e8f6defe61012821"
+github "Palleas/ReactiveCSVParser" "d3aec056921c2bc20bdc0cd670edb4270cbb1910"
