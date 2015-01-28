@@ -1,12 +1,8 @@
 osx_image: xcode611
 language: objective-c
 
-before_install:
-    - brew update
-    - brew install carthage --HEAD
-    - carthage bootstrap || find $TMPDIR -type f -name "carthage-xcodebuild.*" -exec cat {} \;
-    - gem install bundler --no-rdoc --no-ri
-    - bundle install
+before_script:
+    - Scripts/bootstrap
 
 script:
     - make build

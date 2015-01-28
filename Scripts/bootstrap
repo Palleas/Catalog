@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+echo "*********** Installing Carthage ***********"
+brew update
+brew install carthage --HEAD
+
+echo "*********** Installing dependencies with Carthage ***********"
+carthage bootstrap
+ret=$?
+if [ $? -ne 0 ]; then 
+	echo "⚠ Carthage command failed, here are the logs (maybe)"
+	find $TMPDIR -type f -name "carthage-xcodebuild.*" -exec cat {} \;
+	exit $ret
+fi
+
+echo "*********** Installing ruby dependencies ***********"
+gem install bundler --no-rdoc --no-ri
+bundle install
