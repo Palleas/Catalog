@@ -8,36 +8,26 @@
 
 import Cocoa
 import Realm
+import ReactiveCocoa
+import ReactiveCSVParser
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSStreamDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    var stream: NSStream!
-    var buffer: NSMutableData!
-    var totalBytesRead: Int = 0
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let u = NSURL(string: "http://donnees.ville.montreal.qc.ca/dataset/37450231-e4d4-4e9c-99b3-5e88afa6e053/resource/67a95c30-4e21-4346-83f7-491d4ca54a7e/download/cataloguebibliotheque.zip")!
-//        let u = NSURL(string: "http://donnees.ville.montreal.qc.ca/storage/f/2013-10-14T00%3A41%3A56.426Z/l29-patinoire.zip")!
+//        let u = NSURL(string: "http://donnees.ville.montreal.qc.ca/dataset/37450231-e4d4-4e9c-99b3-5e88afa6e053/resource/67a95c30-4e21-4346-83f7-491d4ca54a7e/download/cataloguebibliotheque.zip")!
+        
+        let u = NSURL(string: "http://donnees.ville.montreal.qc.ca/storage/f/2013-10-14T00%3A41%3A56.426Z/l29-patinoire.zip")!
         
         let task = NSURLSession.sharedSession().downloadTaskWithURL(u, completionHandler: { (url, response, error) -> Void in
             println("Download is over")
             if let csv = self.unzipAndFindCSV(url.path!) {
-                println("Found CSV file at \(csv)")
-                
-                let importer = CSVImporter(path: csv)
-                importer.performImport()
-
-                RLMRealm.defaultRealm().beginWriteTransaction()
-                for (index, title) in enumerate(importer.titles) {
-                    println("Importing \(title)")
-                    let item = Item()
-                    item.title = title
-                    
-                    Item.createInDefaultRealmWithObject(item)
-                }
-                RLMRealm.defaultRealm().commitWriteTransaction()
+                let parser = Parser(path: csv)
+                parser.parse().subscribeNext({ (next) -> Void in
+                    println("Got next \(next)")
+                })
             }
         })
         task.resume()

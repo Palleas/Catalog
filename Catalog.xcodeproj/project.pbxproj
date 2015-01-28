@@ -15,10 +15,10 @@
 		8213E5FF1A773CE90027CBD2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213E5FE1A773CE90027CBD2 /* Item.swift */; };
 		8213E6001A773E200027CBD2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8213E5FE1A773CE90027CBD2 /* Item.swift */; };
 		8213E6021A773E560027CBD2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213E5FA1A773C810027CBD2 /* Realm.framework */; };
-		8229C9861A6AC749008E3CAE /* CSVImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */; };
-		8229C9881A6AC78E008E3CAE /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = 8229C9871A6AC78E008E3CAE /* Fixtures */; };
-		8229C98A1A6AC94D008E3CAE /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9891A6AC94D008E3CAE /* CSVImporter.swift */; };
-		8229C98B1A6AC94D008E3CAE /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C9891A6AC94D008E3CAE /* CSVImporter.swift */; };
+		82D9472B1A788EEE000BF646 /* ReactiveCSVParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D9472A1A788EEE000BF646 /* ReactiveCSVParser.framework */; };
+		82D9472C1A788EEE000BF646 /* ReactiveCSVParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82D9472A1A788EEE000BF646 /* ReactiveCSVParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82D9472E1A789080000BF646 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D9472D1A789080000BF646 /* ReactiveCocoa.framework */; };
+		82D9472F1A789080000BF646 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82D9472D1A789080000BF646 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8213E5FC1A773C810027CBD2 /* Realm.framework in Embed Frameworks */,
+				82D9472F1A789080000BF646 /* ReactiveCocoa.framework in Embed Frameworks */,
+				82D9472C1A788EEE000BF646 /* ReactiveCSVParser.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,9 +57,8 @@
 		7A2922501A69B54600824E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8213E5FA1A773C810027CBD2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/Mac/Realm.framework; sourceTree = "<group>"; };
 		8213E5FE1A773CE90027CBD2 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporterTests.swift; sourceTree = "<group>"; };
-		8229C9871A6AC78E008E3CAE /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
-		8229C9891A6AC94D008E3CAE /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporter.swift; sourceTree = "<group>"; };
+		82D9472A1A788EEE000BF646 /* ReactiveCSVParser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCSVParser.framework; path = Carthage/Build/Mac/ReactiveCSVParser.framework; sourceTree = "<group>"; };
+		82D9472D1A789080000BF646 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8213E5FB1A773C810027CBD2 /* Realm.framework in Frameworks */,
+				82D9472E1A789080000BF646 /* ReactiveCocoa.framework in Frameworks */,
+				82D9472B1A788EEE000BF646 /* ReactiveCSVParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +109,6 @@
 				7A2922421A69B54600824E41 /* Images.xcassets */,
 				7A2922441A69B54600824E41 /* MainMenu.xib */,
 				7A29223E1A69B54600824E41 /* Supporting Files */,
-				8229C9891A6AC94D008E3CAE /* CSVImporter.swift */,
 				8213E5FE1A773CE90027CBD2 /* Item.swift */,
 			);
 			path = Catalog;
@@ -123,9 +125,7 @@
 		7A29224E1A69B54600824E41 /* CatalogTests */ = {
 			isa = PBXGroup;
 			children = (
-				8229C9871A6AC78E008E3CAE /* Fixtures */,
 				7A29224F1A69B54600824E41 /* Supporting Files */,
-				8229C9851A6AC749008E3CAE /* CSVImporterTests.swift */,
 			);
 			path = CatalogTests;
 			sourceTree = "<group>";
@@ -141,6 +141,8 @@
 		8213E6011A773E2B0027CBD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82D9472D1A789080000BF646 /* ReactiveCocoa.framework */,
+				82D9472A1A788EEE000BF646 /* ReactiveCSVParser.framework */,
 				8213E5FA1A773C810027CBD2 /* Realm.framework */,
 			);
 			name = Frameworks;
@@ -236,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8229C9881A6AC78E008E3CAE /* Fixtures in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8229C98A1A6AC94D008E3CAE /* CSVImporter.swift in Sources */,
 				8213E5FF1A773CE90027CBD2 /* Item.swift in Sources */,
 				7A2922411A69B54600824E41 /* AppDelegate.swift in Sources */,
 			);
@@ -257,9 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8229C98B1A6AC94D008E3CAE /* CSVImporter.swift in Sources */,
 				8213E6001A773E200027CBD2 /* Item.swift in Sources */,
-				8229C9861A6AC749008E3CAE /* CSVImporterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
