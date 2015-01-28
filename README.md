@@ -1,6 +1,6 @@
 # Catalog
 
-[![Build Status](https://magnum.travis-ci.com/Palleas/Catalog.svg?token=2xaspU5CqywbC4zeTmvm&branch=master)](https://magnum.travis-ci.com/Palleas/Catalog)
+[![Build Status](https://travis-ci.org/Palleas/Catalog.svg?branch=master)](https://travis-ci.org/Palleas/Catalog)
 
 Toying with a big CSV file.
 
