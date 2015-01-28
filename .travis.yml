@@ -2,8 +2,11 @@ osx_image: xcode61
 language: objective-c
 
 before_install:
+	- brew update
+	- brew install carthage --HEAD
+	- carthage bootstrap
     - gem install bundler --no-rdoc --no-ri
     - bundle install
 
 script:
-    - make test
+    - make build

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+PROJECT=Catalog.xcodeproj
+SCHEME=Catalog
+
+xcodebuild test -project $PROJECT -scheme $SCHEME | bundle exec xcpretty
