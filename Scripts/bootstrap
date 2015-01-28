@@ -13,7 +13,7 @@ if [ $ret -ne 0 ]; then
 	exit $ret
 fi
 
-find Carthage/Checkouts -type -f -name "*iOS.xcscheme" -delete
+find Carthage/Checkouts -type f -name "*iOS.xcscheme" -delete
 
 carthage build
 ret=$?
