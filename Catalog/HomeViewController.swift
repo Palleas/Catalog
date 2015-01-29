@@ -51,6 +51,11 @@ class HomeViewController: NSViewController {
     }
     
     func download() -> RACSignal {
+        let archive = self.cacheDirectory().stringByAppendingPathComponent("catalog.zip")
+        if NSFileManager.defaultManager().fileExistsAtPath(archive) {
+            NSFileManager.defaultManager().removeItemAtPath(archive, error: nil)
+        }
+        
         return RACSignal.createSignal({ (subscriber) -> RACDisposable! in
             let u = NSURL(string: "http://donnees.ville.montreal.qc.ca/dataset/37450231-e4d4-4e9c-99b3-5e88afa6e053/resource/67a95c30-4e21-4346-83f7-491d4ca54a7e/download/cataloguebibliotheque.zip")!
             
