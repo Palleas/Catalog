@@ -9,11 +9,16 @@
 import Cocoa
 import ReactiveCocoa
 import ReactiveCSVParser
+import Realm
 
 class HomeViewController: NSViewController {
+    var realm: RLMRealm?
     
     @IBAction func importButtonPressed(sender: AnyObject) {
         println("Import button pressed, starting download")
+        realm = RLMRealm(path: cacheDirectory().stringByAppendingPathComponent("catalog.realm"))
+        println("Path to realm is \(realm?.path)")
+        
         self.download().flattenMap { (zipFile) -> RACStream! in
             println("Archive was downloaded to \(zipFile)")
             return self.unzip(zipFile as String, destination: self.cacheDirectory())
@@ -21,8 +26,17 @@ class HomeViewController: NSViewController {
             println("Starting parsing of file \(csvFile)")
             let parser = Parser(path: csvFile as String)
             return parser.parse()
-        }.subscribeNext({ (line) -> Void in
-            println("Got line \(line)")
+        }.filter { (line) -> Bool in
+            let count = countElements(line as Array<String>)
+            println("Lines has \(count) items")
+            return count >= 9
+        } .deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext({ (line) -> Void in
+            let item = Item()
+            item.title = line[8] as String
+
+            self.realm?.beginWriteTransaction()
+            Item.createInRealm(self.realm, withObject: item)
+            self.realm?.commitWriteTransaction()
         }, error: { (error) -> Void in
             println("Got error \(error)")
         }) { () -> Void in
