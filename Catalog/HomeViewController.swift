@@ -10,18 +10,7 @@ import Cocoa
 import ReactiveCocoa
 import ReactiveCSVParser
 
-class HomeViewController: NSViewController /*, NSURLSessionDownloadDelegate*/ {
-//    let session: NSURLSession
-//    
-//    required init?(coder: NSCoder) {
-//        session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: self, delegateQueue: nil)
-//        
-//        super.init(coder: coder)
-//    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class HomeViewController: NSViewController {
     
     @IBAction func importButtonPressed(sender: AnyObject) {
         println("Import button pressed, starting download")
